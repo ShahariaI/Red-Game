@@ -6,9 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 10f;
-    public float dashSpeed = 20f;  // Speed during a dash
-    public float dashDuration = 0.2f;  // How long the dash lasts
-    public float dashCooldown = 1f;  // Cooldown between dashes
+
+    // Dash variables
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
+    public int dashStaminaCost = 25;
+
+    // Stamina variables
+    public int maxStamina = 100;
+    public int currentStamina;
+    public float staminaRegenRate = 10f; // Stamina points per second
+    private bool isRegeneratingStamina;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -19,10 +28,17 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentStamina = maxStamina;
     }
 
     void Update()
     {
+        // Stamina regeneration
+        if (!isDashing && currentStamina < maxStamina && !isRegeneratingStamina)
+        {
+            StartCoroutine(RegenerateStamina());
+        }
+
         // If dashing, apply dash movement and return
         if (isDashing)
         {
@@ -41,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= lastDashTime + dashCooldown)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash())
         {
             StartDash(moveInput);
         }
@@ -76,11 +92,31 @@ public class PlayerMovement : MonoBehaviour
         dashTimeLeft = dashDuration;
         lastDashTime = Time.time;
 
+        // Deduct stamina
+        currentStamina -= dashStaminaCost;
+
         // Face the dash direction
         if (moveInput != 0)
         {
             transform.localScale = new Vector3(Mathf.Sign(moveInput), 1, 1);
         }
+    }
+
+    private bool CanDash()
+    {
+        return Time.time >= lastDashTime + dashCooldown && currentStamina >= dashStaminaCost;
+    }
+
+    private IEnumerator RegenerateStamina()
+    {
+        isRegeneratingStamina = true;
+        while (currentStamina < maxStamina)
+        {
+            currentStamina += Mathf.RoundToInt(staminaRegenRate * Time.deltaTime);
+            currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
+            yield return null;
+        }
+        isRegeneratingStamina = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
