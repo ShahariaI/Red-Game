@@ -227,7 +227,6 @@ GameObject:
   - component: {fileID: 1437126662}
   - component: {fileID: 1437126661}
   - component: {fileID: 1437126660}
-  - component: {fileID: 1437126659}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -235,20 +234,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1437126659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437126658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb90a2f97fe55d4e978f6b415af7e35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1437126664}
-  offset: {x: 0, y: 0, z: -10}
 --- !u!114 &1437126660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +311,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
