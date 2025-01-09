@@ -735,7 +735,7 @@ MonoBehaviour:
   dashStaminaCost: 25
   maxStamina: 100
   currentStamina: 0
-  staminaRegenRate: 60
+  staminaRegenRate: 50
   staminaText: {fileID: 320763006}
 --- !u!61 &1437126661
 BoxCollider2D:
