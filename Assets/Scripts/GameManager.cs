@@ -40,12 +40,9 @@ public class GameManager : MonoBehaviour
 
         if (playerLives <= 0)
         {
-            GameOver();
-        }
-        else
-        {
             RestartLevel();
         }
+        
     }
 
     private void RestartLevel()
