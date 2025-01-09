@@ -400,6 +400,7 @@ MonoBehaviour:
   maxStamina: 100
   currentStamina: 0
   staminaRegenRate: 200
+  staminaText: {fileID: 0}
 --- !u!61 &1437126661
 BoxCollider2D:
   m_ObjectHideFlags: 0
