@@ -396,10 +396,10 @@ MonoBehaviour:
   dashSpeed: 20
   dashDuration: 0.5
   dashCooldown: 1
-  dashStaminaCost: 25
+  dashStaminaCost: 15
   maxStamina: 100
   currentStamina: 0
-  staminaRegenRate: 10
+  staminaRegenRate: 6.25
 --- !u!61 &1437126661
 BoxCollider2D:
   m_ObjectHideFlags: 0
