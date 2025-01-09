@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Stamina variables
     public int maxStamina = 100;
     public int currentStamina;
-    public float staminaRegenRate = 60000f; // Stamina points per second
+    public float staminaRegenRate = 10f; // Stamina points per second
     private bool isRegeneratingStamina;
 
     // TextMeshPro reference
