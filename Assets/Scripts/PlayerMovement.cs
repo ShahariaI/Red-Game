@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,8 +17,11 @@ public class PlayerMovement : MonoBehaviour
     // Stamina variables
     public int maxStamina = 100;
     public int currentStamina;
-    public float staminaRegenRate = 10f; // Stamina points per second
+    public float staminaRegenRate = 60000f; // Stamina points per second
     private bool isRegeneratingStamina;
+
+    // TextMeshPro reference
+    public TextMeshProUGUI staminaText; // Reference to TextMeshPro UI component
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -29,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentStamina = maxStamina;
+
+        // Initialize the stamina text
+        UpdateStaminaText();
     }
 
     void Update()
@@ -94,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Deduct stamina
         currentStamina -= dashStaminaCost;
+        UpdateStaminaText(); // Update stamina text
 
         // Face the dash direction
         if (moveInput != 0)
@@ -114,9 +122,18 @@ public class PlayerMovement : MonoBehaviour
         {
             currentStamina += Mathf.RoundToInt(staminaRegenRate * Time.deltaTime);
             currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
+            UpdateStaminaText(); // Update stamina text
             yield return null;
         }
         isRegeneratingStamina = false;
+    }
+
+    private void UpdateStaminaText()
+    {
+        if (staminaText != null)
+        {
+            staminaText.text = $"Stamina: {currentStamina}/{maxStamina}";
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
