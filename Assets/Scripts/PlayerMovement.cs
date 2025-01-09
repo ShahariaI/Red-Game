@@ -107,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
         return Time.time >= lastDashTime + dashCooldown && currentStamina >= dashStaminaCost;
     }
 
+
     private IEnumerator RegenerateStamina()
     {
         isRegeneratingStamina = true;
@@ -114,10 +115,13 @@ public class PlayerMovement : MonoBehaviour
         {
             currentStamina += Mathf.RoundToInt(staminaRegenRate * Time.deltaTime);
             currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
-            yield return null;
+            yield return new WaitForSeconds(0.1f); // Regenerate every 0.1 seconds
+            Debug.Log($"Current Stamina: {currentStamina}");
+            Debug.Log($"Stamina Regenerating: {currentStamina}/{maxStamina}");
         }
         isRegeneratingStamina = false;
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
