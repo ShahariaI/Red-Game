@@ -394,12 +394,12 @@ MonoBehaviour:
   speed: 5
   jumpForce: 10
   dashSpeed: 20
-  dashDuration: 0.5
+  dashDuration: 0.2
   dashCooldown: 1
-  dashStaminaCost: 15
+  dashStaminaCost: 25
   maxStamina: 100
   currentStamina: 0
-  staminaRegenRate: 6.25
+  staminaRegenRate: 200
 --- !u!61 &1437126661
 BoxCollider2D:
   m_ObjectHideFlags: 0
