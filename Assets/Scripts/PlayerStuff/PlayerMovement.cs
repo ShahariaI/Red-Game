@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+// goober man is dead
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
