@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: c731a022ae493bd43bd6dcc4eb786bf9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hakai dash_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 300
+        width: 450
+        height: 300
+      alignment: 9
+      pivot: {x: 0.49685517, y: 0.6028382}
+      border: {x: 22, y: 138, z: 26, w: 72}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1f345aff639ad4ab960881826f9494
+      internalID: 34512750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hakai dash_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 300
+        width: 425
+        height: 230
+      alignment: 9
+      pivot: {x: 0.55896443, y: 0.7998981}
+      border: {x: 50, y: 143, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb4983cc4a667e4eb43f304e47d0e54
+      internalID: -928169176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hakai dash_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 425
+        height: 300
+      alignment: 9
+      pivot: {x: 0.5511773, y: 0.6091497}
+      border: {x: 38, y: 142, z: 0, w: 61}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387d60fe5c32b304696ecfb10f7bb59b
+      internalID: 1060427020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hakai dash_3
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 300
+        width: 425
+        height: 300
+      alignment: 9
+      pivot: {x: 0.52472913, y: 0.622616}
+      border: {x: 21, y: 145, z: 0, w: 56}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee9b032aba55d340854b0ac958e927b
+      internalID: -1433922731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hakai dash_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 450
+        height: 300
+      alignment: 9
+      pivot: {x: 0.4591279, y: 0.6265087}
+      border: {x: 0, y: 133, z: 34, w: 46}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e736738c471fce248aeccd9937277f16
+      internalID: 988764201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hakai dash_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 143
+        width: 425
+        height: 157
+      alignment: 9
+      pivot: {x: 0.5508324, y: 0.2712799}
+      border: {x: 43, y: 0, z: 0, w: 55}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad16bb3cd10bbe649874e1b849bce45c
+      internalID: 822802902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hakai dash_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 300
+      alignment: 9
+      pivot: {x: 0.47340032, y: 0.61191154}
+      border: {x: 2, y: 137, z: 25, w: 61}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f510c2ba3e90d9d4eaf83a1a2db4aa05
+      internalID: -935331820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hakai dash_0: 34512750
+      Hakai dash_1: -928169176
+      Hakai dash_2: 1060427020
+      Hakai dash_3: -1433922731
+      Hakai dash_4: 988764201
+      Hakai dash_5: 822802902
+      Hakai dash_6: -935331820
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
