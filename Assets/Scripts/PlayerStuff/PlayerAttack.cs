@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && Time.time >= nextAttackTime)
+        if (Input.GetKeyDown(KeyCode.L) && Time.time >= nextAttackTime)
         {
             Attack();
             nextAttackTime = Time.time + attackCooldown;
