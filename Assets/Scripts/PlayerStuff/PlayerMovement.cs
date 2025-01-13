@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(float jumpForce)
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        animator.SetBool("isJumping", !isGrounded);
+        animator.SetBool("isJumping", isGrounded);
     }
 
     private void Dash()
@@ -135,7 +135,10 @@ public class PlayerMovement : MonoBehaviour
         UpdateStaminaText(); // Update stamina text
 
         // Face the dash direction
-      
+      if (moveInput != 0)
+        {
+            transform.localScale = new Vector2(Mathf.Sign(moveInput), 1);
+        }
     }
 
     private bool CanDash()
