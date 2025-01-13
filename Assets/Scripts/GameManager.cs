@@ -47,6 +47,10 @@ public class GameManager : MonoBehaviour
 
         if (playerLives <= 0)
         {
+           
+        }
+        else
+        {
             RestartLevel();
         }
 

@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using System;
-using UnityEditor.Tilemaps;
-// goober man is dead
+using TMPro; // Ensure you include this for TextMeshProUGUI
+using System.Collections;
+
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
@@ -42,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         // Initialize the stamina text
         UpdateStaminaText();
     }
+
+    
 
     void Update()
     {
@@ -147,6 +146,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Enemy")) // Replace 'Enemy' with the appropriate tag
+        {
+            GameManager.Instance.PlayerDied(); // Notify GameManager of the player's death
+        }
+
+
+
         if (collision.gameObject.CompareTag("Platform"))
         {
             isGrounded = true;
