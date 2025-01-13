@@ -4,22 +4,38 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 100;
+    public bool IsParrying { get; private set; } // Whether the player is currently parrying
+
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameManager.Instance; // Access the GameManager to get player lives
+    }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        Debug.Log("Player takes " + damage + " damage! Remaining health: " + health);
-
-        if (health <= 0)
+        if (IsParrying)
         {
-            Die();
+            // If the player is parrying, don't take damage
+            Debug.Log("Parry successful! No damage taken.");
+            return;
         }
+
+        // Reduce lives by 1 when damage is taken (not health)
+        gameManager.playerLives -= damage;
+
+        Debug.Log("Player takes damage! Remaining lives: " + gameManager.playerLives);
+
+       
     }
 
-    void Die()
+    public void SetParrying(bool isParrying)
     {
-        Debug.Log("Player has died!");
-        // Add player death logic here
+        IsParrying = isParrying;
     }
 }
+
+
+
+

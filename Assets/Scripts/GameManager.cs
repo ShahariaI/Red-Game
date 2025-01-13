@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance; // Singleton pattern for global access
 
     [Header("Game Settings")]
-    public int playerLives = 3;
+    public int playerLives = 3; // Set starting lives to 3
 
-    [Header("UI References")]
-    public TextMeshProUGUI livesText; // Using TextMeshProUGUI
-    public GameObject gameOverUI;
+    [Header("Player References")]
+    public GameObject player; // Reference to the player GameObject
+    public Transform spawnPoint; // The spawn point for respawn (set this in the Inspector)
+
+    [Header("Player References")]
+    public TextMeshProUGUI livesText;
+
 
     private void Awake()
     {
@@ -28,6 +34,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
         UpdateUI();
@@ -40,9 +47,13 @@ public class GameManager : MonoBehaviour
 
         if (playerLives <= 0)
         {
+           
+        }
+        else
+        {
             RestartLevel();
         }
-        
+
     }
 
     private void RestartLevel()
@@ -51,12 +62,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void GameOver()
-    {
-        // Show Game Over UI
-        gameOverUI.SetActive(true);
-        Time.timeScale = 0; // Pause the game
-    }
+    
 
     public void RestartGame()
     {
@@ -74,3 +80,4 @@ public class GameManager : MonoBehaviour
             livesText.text = "Lives: " + playerLives;
     }
 }
+
