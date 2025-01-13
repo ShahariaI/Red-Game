@@ -25,26 +25,29 @@ public class Enemy : MonoBehaviour
 
     void Attack()
     {
-        // Detect player within range of the attack
-        Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+        // Detect the player within the range of the attack
+        Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
 
-        // Damage the detected player
-        foreach (Collider2D player in hitPlayers)
+        if (hitPlayer != null)
         {
-            Debug.Log("Enemy attacks " + player.name);
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            Debug.Log("Enemy attacks " + hitPlayer.name);
+            PlayerHealth playerHealth = hitPlayer.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                // If the player is not parrying, reduce 1 life
+                // Check if the player is parrying
                 if (!playerHealth.IsParrying)
                 {
-                    playerHealth.TakeDamage(attackDamage); // Decrease 1 life
+                    playerHealth.TakeDamage(attackDamage); // Reduce player health
                 }
                 else
                 {
                     Debug.Log("Parried attack, no damage taken!");
                 }
             }
+        }
+        else
+        {
+            Debug.Log("No player in range to attack.");
         }
     }
 
