@@ -4,13 +4,12 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEditor.Tilemaps;
-using Animator;
 // goober man is dead
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 10f;
-    float h;
+    private float h;
 
     // Dash variables
     public float dashSpeed = 20f;
@@ -34,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private float dashTimeLeft;
     private float lastDashTime;
-    Animator animator;
+    private Animator animator;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
