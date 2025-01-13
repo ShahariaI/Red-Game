@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   attackDamage: 1
-  attackRange: 1.38
+  attackRange: 2
   attackCooldown: 1
   attackPoint: {fileID: 1856981204}
   playerLayer:
