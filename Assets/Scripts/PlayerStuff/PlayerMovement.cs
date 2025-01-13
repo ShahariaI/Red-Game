@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public float jumpForce = 10f;
     private float h;
+    public float facingDirection = 1;
 
     // Dash variables
     public float dashSpeed = 20f;
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private float dashTimeLeft;
     private float lastDashTime;
     private Animator animator;
+    
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -82,14 +84,18 @@ public class PlayerMovement : MonoBehaviour
             StartDash(moveInput);
         }
 
+        // Update facing direction
         if (moveInput > 0)
         {
-            spriteRenderer.flipX = false;
+            facingDirection = 1;
         }
         else if (moveInput < 0)
         {
-            spriteRenderer.flipX = true;
+            facingDirection = -1;
         }
+
+        // Update animator parameter
+        animator.SetFloat("FacingDirection", facingDirection);
 
     }
     private void FixedUpdate()
