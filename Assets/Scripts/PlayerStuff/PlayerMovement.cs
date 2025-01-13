@@ -1,195 +1,91 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using System;
-using UnityEditor.Tilemaps;
-// goober man is dead
+
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpForce = 10f;
-    private float h;
-    public float facingDirection = 1;
+    private float horizontal;
+    private float speed = 8f;
+    private float jumpingPower = 16f;
+    private bool isFacingRight = true;
 
-    // Dash variables
-    public float dashSpeed = 20f;
-    public float dashDuration = 0.2f;
-    public float dashCooldown = 1f;
-    public int dashStaminaCost = 25;
-
-    // Stamina variables
-    public int maxStamina = 100;
-    public int currentStamina;
-    public float staminaRegenRate = 10f; // Stamina points per second
-    private bool isRegeneratingStamina;
-
-    // TextMeshPro reference
-    public TextMeshProUGUI staminaText; // Reference to TextMeshPro UI component
-    private SpriteRenderer spriteRenderer;
-
-
-    private Rigidbody2D rb;
-    private bool isGrounded;
+    private bool canDash = true;
     private bool isDashing;
-    private float dashTimeLeft;
-    private float lastDashTime;
-    private Animator animator;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
     
-    void Start()
+
+    private void Update()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        rb = GetComponent<Rigidbody2D>();
-        currentStamina = maxStamina;
-
-        // Initialize the stamina text
-        UpdateStaminaText();
-
-        animator = GetComponent<Animator>();
-
-    }
-
-    void Update()
-    {
-
-
-
-        // Stamina regeneration
-        if (!isDashing && currentStamina < maxStamina && !isRegeneratingStamina)
-        {
-            StartCoroutine(RegenerateStamina());
-        }
-
-        // If dashing, apply dash movement and return
         if (isDashing)
         {
-            Dash();
             return;
         }
 
-        // Horizontal movement
-        float moveInput = Input.GetAxis("Horizontal");
-        Move(new Vector2(moveInput, 0));
+        horizontal = Input.GetAxisRaw("Horizontal");
 
-        // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            Jump(jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
-        // Dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash())
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
-            StartDash(moveInput);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
-        // Update facing direction
-        if (moveInput > 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            facingDirection = 1;
-        }
-        else if (moveInput < 0)
-        {
-            facingDirection = -1;
+            StartCoroutine(Dash());
         }
 
-        // Update animator parameter
-        animator.SetFloat("FacingDirection", facingDirection);
-
+        Flip();
     }
+
     private void FixedUpdate()
     {
-        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
-        animator.SetFloat("yVelocity", rb.velocity.y);
-    }
-
-    public void Move(Vector2 direction)
-    {
-        rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
-    }
-
-    public void Jump(float jumpForce)
-    {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        animator.SetBool("isJumping", !isGrounded);
-    }
-
-    private void Dash()
-    {
-        if (dashTimeLeft > 0)
+        if (isDashing)
         {
-            rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y);
-            dashTimeLeft -= Time.deltaTime;
-            animator.SetBool("isDashing", true);
+            return;
         }
-        else
+
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
-            isDashing = false;
-            animator.SetBool("isDashing", false);
+            Vector3 localScale = transform.localScale;
+            isFacingRight = !isFacingRight;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
     }
 
-    private void StartDash(float moveInput)
+    private IEnumerator Dash()
     {
+        canDash = false;
         isDashing = true;
-        dashTimeLeft = dashDuration;
-        lastDashTime = Time.time;
-
-        // Deduct stamina
-        currentStamina -= dashStaminaCost;
-        UpdateStaminaText(); // Update stamina text
-
-        // Face the dash direction
-        if (moveInput != 0)
-        {
-            transform.localScale = new Vector3(Mathf.Sign(moveInput), 1, 1);
-        }
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        
+        yield return new WaitForSeconds(dashingTime);
+        
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
-
-    private bool CanDash()
-    {
-        return Time.time >= lastDashTime + dashCooldown && currentStamina >= dashStaminaCost;
-    }
-
-    private IEnumerator RegenerateStamina()
-    {
-        isRegeneratingStamina = true;
-        while (currentStamina < maxStamina)
-        {
-            currentStamina += Mathf.RoundToInt(staminaRegenRate * Time.deltaTime);
-            currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
-            UpdateStaminaText(); // Update stamina text
-            yield return null;
-        }
-        isRegeneratingStamina = false;
-    }
-
-    private void UpdateStaminaText()
-    {
-        if (staminaText != null)
-        {
-            staminaText.text = $"Stamina: {currentStamina}/{maxStamina}";
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Platform"))
-        {
-            isGrounded = true;
-            animator.SetBool("isJumping", !isGrounded);
-
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Platform"))
-        {
-            isGrounded = false;
-        }
-    }
-
-    //i'm gonna kill someone
 }
