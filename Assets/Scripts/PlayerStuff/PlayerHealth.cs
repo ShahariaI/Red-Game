@@ -27,11 +27,7 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("Player takes damage! Remaining lives: " + gameManager.playerLives);
 
-        if (gameManager.playerLives <= 0)
-        {
-            // Trigger respawn logic when lives are 0
-            gameManager.RespawnPlayer();
-        }
+       
     }
 
     public void SetParrying(bool isParrying)

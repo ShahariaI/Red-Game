@@ -12,7 +12,7 @@ public class DeathBorder : MonoBehaviour
             // Call the PlayerDied method from GameManager
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.RespawnPlayer();
+                
             }
             else
             {
