@@ -5,11 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 50; // Health of the enemy
-    public int attackDamage = 100; // Set to 1 to reduce only 1 life per attack
+    public int attackDamage = 1; // Set to 1 to reduce only 1 life per attack
     public float attackRange = 1.0f; // Range of the enemy attack
     public float attackCooldown = 1.0f; // Time between attacks
 
-    private float nextAttackTime = 0f; // Time when the enemy can attack next
+    private float nextAttackTime = 1f; // Time when the enemy can attack next
 
     public Transform attackPoint; // Point from which the enemy attack originates
     public LayerMask playerLayer; // Layer of the player to detect
@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
     {
         // Detect player within range of the attack
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+
+        print(hitPlayers.Length);
 
         // Damage the detected player
         foreach (Collider2D player in hitPlayers)
