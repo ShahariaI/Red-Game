@@ -35,5 +35,45 @@ public class GameManager : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+        UpdateUI();
+    }
+
+    public void PlayerDied()
+    {
+        playerLives--;
+        UpdateUI();
+
+        if (playerLives <= 0)
+        {
+            RestartLevel();
+        }
+
+    }
+
+    private void RestartLevel()
+    {
+        // Restart the current level
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    
+
+    public void RestartGame()
+    {
+        // Reset game state
+        playerLives = 3;
+        UpdateUI();
+
+        Time.timeScale = 1; // Resume the game
+        SceneManager.LoadScene(0); // Load the first scene (assuming it's the main menu)
+    }
+
+    private void UpdateUI()
+    {
+        if (livesText != null)
+            livesText.text = "Lives: " + playerLives;
+    }
 }
 
