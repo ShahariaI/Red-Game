@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         {
             RestartLevel();
         }
-        
+
     }
 
     private void RestartLevel()
@@ -74,3 +74,4 @@ public class GameManager : MonoBehaviour
             livesText.text = "Lives: " + playerLives;
     }
 }
+

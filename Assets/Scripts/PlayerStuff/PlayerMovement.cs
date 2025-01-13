@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 10f;
-    float h;
 
     // Dash variables
     public float dashSpeed = 20f;
@@ -25,34 +24,27 @@ public class PlayerMovement : MonoBehaviour
 
     // TextMeshPro reference
     public TextMeshProUGUI staminaText; // Reference to TextMeshPro UI component
-    private SpriteRenderer spriteRenderer;
-    
-   
+
     private Rigidbody2D rb;
     private bool isGrounded;
     private bool isDashing;
     private float dashTimeLeft;
     private float lastDashTime;
-    Animator animator;
+
+    private SpriteRenderer spriteRenderer; // SpriteRenderer reference
+
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Initialize the SpriteRenderer
         currentStamina = maxStamina;
 
         // Initialize the stamina text
         UpdateStaminaText();
-
-        animator = GetComponent<Animator>();
-      
     }
-    
+
     void Update()
     {
-
-       
-  
         // Stamina regeneration
         if (!isDashing && currentStamina < maxStamina && !isRegeneratingStamina)
         {
@@ -70,6 +62,16 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
         Move(new Vector2(moveInput, 0));
 
+        // Flip the sprite based on movement direction
+        if (moveInput > 0)
+        {
+            spriteRenderer.flipX = false; // Face right
+        }
+        else if (moveInput < 0)
+        {
+            spriteRenderer.flipX = true; // Face left
+        }
+
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -81,21 +83,6 @@ public class PlayerMovement : MonoBehaviour
         {
             StartDash(moveInput);
         }
-
-        if (moveInput > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (moveInput < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-
-    }
-    private void FixedUpdate()
-    {
-        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
-        animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     public void Move(Vector2 direction)
@@ -106,7 +93,6 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(float jumpForce)
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        animator.SetBool("isJumping", !isGrounded);
     }
 
     private void Dash()
@@ -115,12 +101,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y);
             dashTimeLeft -= Time.deltaTime;
-            animator.SetBool("isDashing", true);
         }
         else
         {
             isDashing = false;
-            animator.SetBool("isDashing", false);
         }
     }
 
@@ -129,13 +113,10 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
         dashTimeLeft = dashDuration;
         lastDashTime = Time.time;
-        
+
         // Deduct stamina
         currentStamina -= dashStaminaCost;
         UpdateStaminaText(); // Update stamina text
-
-        // Face the dash direction
-      
     }
 
     private bool CanDash()
@@ -169,8 +150,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             isGrounded = true;
-            animator.SetBool("isJumping", !isGrounded);
-
         }
     }
 
@@ -181,9 +160,4 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
     }
-    void flip()
-    {
-  
-    }
- //i'm gonna kill someone
 }
