@@ -37,15 +37,7 @@ public class Enemy : MonoBehaviour
             PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                // If the player is not parrying, reduce 1 life
-                if (!playerHealth.IsParrying)
-                {
-                    playerHealth.TakeDamage(attackDamage); // Decrease 1 life
-                }
-                else
-                {
-                    Debug.Log("Parried attack, no damage taken!");
-                }
+                
             }
         }
     }
