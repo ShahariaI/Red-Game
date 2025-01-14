@@ -37,12 +37,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
+            print("first jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             animator.SetBool("isJumping", true);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
+            print("double jump");
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             
         }
