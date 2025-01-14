@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,18 +10,21 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
-    private bool doubleJump;
     private bool canDash = true;
     private bool isDashing;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
-
+    private Animator animator;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -31,24 +35,16 @@ public class PlayerMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (IsGrounded() && !Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            doubleJump = false;
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            if (IsGrounded() || doubleJump)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-
-                doubleJump = !doubleJump;
-            }
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            animator.SetBool("isJumping", true);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            animator.SetBool("isJumping", false);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
@@ -61,12 +57,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
         if (isDashing)
         {
             return;
+            
         }
 
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        
     }
 
     private bool IsGrounded()
@@ -83,20 +84,33 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
-
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
     }
+
     private IEnumerator Dash()
     {
+     
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
+        if (isDashing == true)
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        if (isDashing == true)
+        {
+            animator.SetBool("isDashing", true);
+        }
         yield return new WaitForSeconds(dashingTime);
+        
         rb.gravityScale = originalGravity;
         isDashing = false;
+        if (isDashing == false)
+        {
+            animator.SetBool("isDashing", false);
+        }
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+
+       
+        
     }
 }
