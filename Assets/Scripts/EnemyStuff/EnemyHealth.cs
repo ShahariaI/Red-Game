@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Attack()
+    public void Attack()
     {
         // Detect player within range of the attack
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
