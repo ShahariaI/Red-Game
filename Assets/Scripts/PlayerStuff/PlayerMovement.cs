@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    private bool doubleJump;
 
     private bool canDash = true;
     private bool isDashing;
@@ -35,11 +36,17 @@ public class PlayerMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (IsGrounded() && !Input.GetButton("Jump"))
+        {
+            doubleJump = false;
+        }
+
+        if (Input.GetButtonDown("Jump") && IsGrounded()|| doubleJump)
         {
             print("first jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             animator.SetBool("isJumping", true);
+            doubleJump = !doubleJump;
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
