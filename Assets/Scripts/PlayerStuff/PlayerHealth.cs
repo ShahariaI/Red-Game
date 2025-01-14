@@ -4,38 +4,26 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public bool IsParrying { get; private set; } // Whether the player is currently parrying
+    [SerializeField] private float startingHealth;
+    public float currentHealth { get; private set; }
 
-    private GameManager gameManager;
-
-    private void Start()
+    
+    private void Awake()
     {
-        gameManager = GameManager.Instance; // Access the GameManager to get player lives
+        currentHealth = startingHealth;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float _damage)
     {
-        if (IsParrying)
+        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+
+        if(currentHealth > 0)
         {
-            // If the player is parrying, don't take damage
-            Debug.Log("Parry successful! No damage taken.");
-            return;
+            // player hurt
         }
-
-        // Reduce lives by 1 when damage is taken (not health)
-        gameManager.playerLives -= damage;
-
-        Debug.Log("Player takes damage! Remaining lives: " + gameManager.playerLives);
-
-       
-    }
-
-    public void SetParrying(bool isParrying)
-    {
-        IsParrying = isParrying;
+        else
+        {
+            // player dead
+        }
     }
 }
-
-
-
-
