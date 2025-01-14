@@ -104,8 +104,8 @@ TextureImporter:
         y: 300
         width: 262
         height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6504684, y: 0.5}
       border: {x: 100, y: 50, z: 0, w: 54}
       outline: []
       physicsShape: []
@@ -122,11 +122,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 300
-        y: 300
+        y: 301
         width: 300
         height: 244
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.58447725, y: 0.59809524}
       border: {x: 105, y: 51, z: 34, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +142,12 @@ TextureImporter:
       name: hakai jump strat_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 300
+        x: 598
+        y: 299
         width: 300
         height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5891705, y: 0.4906137}
       border: {x: 91, y: 52, z: 28, w: 52}
       outline: []
       physicsShape: []
@@ -167,8 +167,8 @@ TextureImporter:
         y: 300
         width: 273
         height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6547203, y: 0.46714762}
       border: {x: 107, y: 36, z: 0, w: 50}
       outline: []
       physicsShape: []
@@ -188,8 +188,8 @@ TextureImporter:
         y: 0
         width: 300
         height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5727443, y: 0.45541462}
       border: {x: 107, y: 24, z: 27, w: 50}
       outline: []
       physicsShape: []
@@ -209,8 +209,8 @@ TextureImporter:
         y: 0
         width: 300
         height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57509106, y: 0.46010792}
       border: {x: 108, y: 5, z: 30, w: 58}
       outline: []
       physicsShape: []
@@ -230,8 +230,8 @@ TextureImporter:
         y: 2
         width: 300
         height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.58917034, y: 0.5756338}
       border: {x: 104, y: 0, z: 23, w: 0}
       outline: []
       physicsShape: []
