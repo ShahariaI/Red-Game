@@ -440,10 +440,11 @@ GameObject:
   m_Component:
   - component: {fileID: 441906309}
   - component: {fileID: 441906308}
+  - component: {fileID: 441906310}
   - component: {fileID: 441906307}
   - component: {fileID: 441906306}
-  - component: {fileID: 441906310}
-  m_Layer: 0
+  - component: {fileID: 441906311}
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +542,8 @@ Transform:
   m_LocalPosition: {x: 4.74, y: -2.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 574196679}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &441906310
@@ -589,6 +591,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &441906311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441906305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46779d3c67f7ba4459fadd741c5bef6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  attackDamage: 1
+  attackRange: 1.23
+  attackCooldown: 1
+  attackPoint: {fileID: 574196679}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &488719735
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +786,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1437126664}
   offset: {x: 0, y: 0, z: -10}
+--- !u!1 &574196678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 574196679}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &574196679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574196678}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 441906309}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &646041942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1159,7 @@ GameObject:
   - component: {fileID: 1437126665}
   - component: {fileID: 1437126666}
   - component: {fileID: 1437126667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1311,7 +1364,7 @@ MonoBehaviour:
   attackPoint: {fileID: 869101598}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!114 &1437126667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,6 +1378,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+--- !u!1 &1503264596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503264597}
+  m_Layer: 0
+  m_Name: Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1503264597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503264596}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.22, y: -2, z: 0.037605044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1661092535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,8 +1439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: 3
-  player: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  player: {fileID: 1437126658}
+  spawnPoint: {fileID: 1503264597}
   livesText: {fileID: 971010151}
 --- !u!4 &1661092537
 Transform:
@@ -1652,3 +1736,4 @@ SceneRoots:
   - {fileID: 441906309}
   - {fileID: 307331630}
   - {fileID: 855188904}
+  - {fileID: 1503264597}
