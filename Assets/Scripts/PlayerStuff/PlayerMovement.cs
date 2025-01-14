@@ -16,7 +16,12 @@ public class PlayerMovement : MonoBehaviour
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
+    private float dashStamina = 25f;
     private Animator animator;
+
+    public float maxStamina = 100f;
+    public float currentStamina = 0f;
+    public float staminaRegenRate = 10f;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -60,12 +65,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashStamina <= currentStamina)
         {
             StartCoroutine(Dash());
         }
 
         Flip();
+
+        RegenStamina();
     }
 
     private void FixedUpdate()
@@ -99,13 +106,20 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void RegenStamina()
+    {
+        if(!isDashing && IsGrounded() && currentStamina <= maxStamina)
+        {
+            currentStamina += staminaRegenRate * Time.deltaTime;
+        }   
+    }
     private IEnumerator Dash()
     {
      
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
+        rb.gravityScale = 0;
         if (isDashing == true)
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         if (isDashing == true)
@@ -120,6 +134,9 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isDashing", false);
         }
+
+        currentStamina -= dashStamina;
+
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
 
