@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 2fce9196e0411aa4583108dcdb8f1c89
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: The wheel man_0
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 650
+        width: 221
+        height: 250
+      alignment: 9
+      pivot: {x: 0.6078897, y: 0.348615}
+      border: {x: 0, y: 0, z: 9, w: 72}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417454a7e35567249b332ba412cd881f
+      internalID: -278320274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_1
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 600
+        width: 229
+        height: 300
+      alignment: 9
+      pivot: {x: 0.61739963, y: 0.45414978}
+      border: {x: 0, y: 51, z: 3, w: 69}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58761e9199d4e1f49a5815104d15feca
+      internalID: -214611639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_2
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 650
+        width: 300
+        height: 250
+      alignment: 9
+      pivot: {x: 0.7137221, y: 0.3320647}
+      border: {x: 72, y: 0, z: 3, w: 65}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cbd713e1e1f5d488d337af5cfa7508
+      internalID: -1114950995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_3
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 600
+        width: 300
+        height: 224
+      alignment: 9
+      pivot: {x: 0.700872, y: 0.5951075}
+      border: {x: 72, y: 52, z: 8, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702a0f9feec38b5429c18fc15e6520a3
+      internalID: -1695634398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 653
+        width: 294
+        height: 247
+      alignment: 9
+      pivot: {x: 0.4960211, y: 0.31932926}
+      border: {x: 6, y: 0, z: 69, w: 78}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2281793e95726104a8e63447d8c84f1a
+      internalID: -879187164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_5
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 300
+        width: 298
+        height: 300
+      alignment: 9
+      pivot: {x: 0.752502, y: 0.4331481}
+      border: {x: 80, y: 49, z: 0, w: 76}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197698ea948a52343b7c5502f7f06be8
+      internalID: 2072763188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_6
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 351
+        width: 223
+        height: 249
+      alignment: 9
+      pivot: {x: 0.6074525, y: 0.309177}
+      border: {x: 0, y: 0, z: 11, w: 71}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c119d5a8e63d2b4f992a6818a1721fd
+      internalID: 1372450175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_7
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 300
+        width: 300
+        height: 300
+      alignment: 9
+      pivot: {x: 0.68144065, y: 0.4244854}
+      border: {x: 67, y: 51, z: 7, w: 69}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d118068d618eed14c9402eca1c768da8
+      internalID: -665020558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 300
+        width: 300
+        height: 300
+      alignment: 9
+      pivot: {x: 0.660046, y: 0.43058318}
+      border: {x: 68, y: 47, z: 7, w: 68}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2c2e442647ad246b8e62422415a230
+      internalID: 262322194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 349
+        width: 231
+        height: 251
+      alignment: 9
+      pivot: {x: 0.54964036, y: 0.34594908}
+      border: {x: 0, y: 0, z: 11, w: 79}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6086c1bdf9254454a8b7eebd858f4d6e
+      internalID: 1936769651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_10
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 0
+        width: 300
+        height: 216
+      alignment: 9
+      pivot: {x: 0.6892041, y: 0.62544984}
+      border: {x: 78, y: 47, z: 8, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55f4aae565bf44459c563a8424f8c52
+      internalID: -1911331105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_11
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 47
+        width: 300
+        height: 253
+      alignment: 9
+      pivot: {x: 0.7230074, y: 0.35093802}
+      border: {x: 79, y: 0, z: 3, w: 78}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66f611ea89cadd4d881ac0e178ef156
+      internalID: -1540246372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The wheel man_12
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 49
+        width: 300
+        height: 253
+      alignment: 9
+      pivot: {x: 0.69062805, y: 0.3476718}
+      border: {x: 78, y: 0, z: 10, w: 75}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecf91f862ca6e44189f6d33f3f84a13
+      internalID: -1511871287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      The wheel man_0: -278320274
+      The wheel man_1: -214611639
+      The wheel man_10: -1911331105
+      The wheel man_11: -1540246372
+      The wheel man_12: -1511871287
+      The wheel man_2: -1114950995
+      The wheel man_3: -1695634398
+      The wheel man_4: -879187164
+      The wheel man_5: 2072763188
+      The wheel man_6: 1372450175
+      The wheel man_7: -665020558
+      The wheel man_8: 262322194
+      The wheel man_9: 1936769651
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
