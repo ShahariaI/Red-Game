@@ -7,17 +7,17 @@ public class EnemyHover : MonoBehaviour, IMovementBehavior
 {
     public float hoverSpeed = 1f;
     public float hoverRange = 1f;
-    private float initialY;
+    private float initialX;
 
     void Start()
     {
-        initialY = transform.position.y;
+        initialX = transform.position.x;
     }
 
     public void Move(Transform enemyTransform)
     {
         // Hover up and down
-        float newY = initialY + Mathf.Sin(Time.time * hoverSpeed) * hoverRange;
+        float newY = initialX + Mathf.Sin(Time.time * hoverSpeed) * hoverRange;
         enemyTransform.position = new Vector3(enemyTransform.position.x, newY, enemyTransform.position.z);
     }
 }
