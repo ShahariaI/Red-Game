@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dcc29745f74c66749a46a06c854c6fef
+guid: 5b503b985c72a2f46b78eee2d441edac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -84,12 +84,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 12
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -97,148 +97,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hakai fall_0
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 300
-        width: 228
-        height: 300
-      alignment: 9
-      pivot: {x: 0.6057608, y: 0.5}
-      border: {x: 60, y: 4, z: 0, w: 38}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ad5e2f61e2f64244b2e7c10c96a9b14
-      internalID: -1413355252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hakai fall_1
-      rect:
-        serializedVersion: 2
-        x: 301
-        y: 301
-        width: 300
-        height: 260
-      alignment: 9
-      pivot: {x: 0.55200905, y: 0.5872885}
-      border: {x: 79, y: 30, z: 49, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ed9e0d0ceb60f04481998611998b0c8
-      internalID: -1386528156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hakai fall_2
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 322
-        width: 252
-        height: 278
-      alignment: 9
-      pivot: {x: 0.6547888, y: 0.46683475}
-      border: {x: 85, y: 0, z: 0, w: 41}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 367153c6540ff244cb45373c87a8b5c3
-      internalID: -1020241834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hakai fall_3
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 320
-        width: 300
-        height: 280
-      alignment: 9
-      pivot: {x: 0.552323, y: 0.47196972}
-      border: {x: 80, y: 0, z: 48, w: 41}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2251a95599c933844b412ae5036ef56b
-      internalID: 1273282023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hakai fall_4
+      name: Akai attack 3(right)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
+        width: 450
         height: 300
-      alignment: 9
-      pivot: {x: 0.5416573, y: 0.478806}
-      border: {x: 76, y: 14, z: 52, w: 37}
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0a81a0c66356554e9e7ad633f06af56
-      internalID: 1305604209
+      spriteID: 2696800ed47ab3347aa38b65707fdfda
+      internalID: -2075672453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hakai fall_5
+      name: Akai attack 3(right)_1
       rect:
         serializedVersion: 2
-        x: 369
+        x: 450
         y: 0
-        width: 231
+        width: 450
         height: 300
-      alignment: 9
-      pivot: {x: 0.40632835, y: 0.4886859}
-      border: {x: 0, y: 19, z: 54, w: 34}
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1f14f8f356110143ae58c6f6e0919b4
-      internalID: -1823517983
+      spriteID: b4c1f0e6ff14d234fb012f370e29045b
+      internalID: -222080669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hakai fall_6
+      name: Akai attack 3(right)_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 12
-        width: 249
-        height: 288
-      alignment: 9
-      pivot: {x: 0.64824045, y: 0.47053644}
-      border: {x: 53, y: 0, z: 0, w: 36}
+        x: 900
+        y: 0
+        width: 450
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f5fc87c4d2bd02439afd4c061dd3ec9
-      internalID: -1202866795
+      spriteID: df25cd0edb1755a43b657729dd6f1c9d
+      internalID: -1828866906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Akai attack 3(right)_3
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 450
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84606a3366495440814cf86c4aa28ea
+      internalID: 1749358107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Akai attack 3(right)_4
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 450
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c54e1f606a49c6438b294e00e1d9fd0
+      internalID: -1958018521
       vertices: []
       indices: 
       edges: []
@@ -254,13 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hakai fall_0: -1413355252
-      Hakai fall_1: -1386528156
-      Hakai fall_2: -1020241834
-      Hakai fall_3: 1273282023
-      Hakai fall_4: 1305604209
-      Hakai fall_5: -1823517983
-      Hakai fall_6: -1202866795
+      Akai attack 3(right)_0: -2075672453
+      Akai attack 3(right)_1: -222080669
+      Akai attack 3(right)_2: -1828866906
+      Akai attack 3(right)_3: 1749358107
+      Akai attack 3(right)_4: -1958018521
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

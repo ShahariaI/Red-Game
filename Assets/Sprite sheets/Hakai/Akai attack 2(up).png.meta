@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c308e9cf0b2fe5b45ae5a28384d2a9d7
+guid: bd096e0fc5b6be9459ccb7bbb049b2d9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,148 +97,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hakai jump strat_0
+      name: Akai attack 2(up)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 300
-        width: 262
+        y: 0
+        width: 450
         height: 300
       alignment: 9
-      pivot: {x: 0.6504684, y: 0.5}
-      border: {x: 100, y: 50, z: 0, w: 54}
+      pivot: {x: 0.31935564, y: 0.55330485}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 693e66c5260c2b94d8b46a7b8378658f
-      internalID: -869033483
+      spriteID: 918d907a960fd50498fa6820d7b9996e
+      internalID: 1036160588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hakai jump strat_1
+      name: Akai attack 2(up)_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 301
-        width: 300
-        height: 244
-      alignment: 9
-      pivot: {x: 0.58447725, y: 0.59809524}
-      border: {x: 105, y: 51, z: 34, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e44f5b048babd9944ba0b4d11247b1e5
-      internalID: 1496143483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hakai jump strat_2
-      rect:
-        serializedVersion: 2
-        x: 598
-        y: 299
-        width: 300
+        x: 450
+        y: 0
+        width: 450
         height: 300
       alignment: 9
-      pivot: {x: 0.5891705, y: 0.4906137}
-      border: {x: 91, y: 52, z: 28, w: 52}
+      pivot: {x: 0.446695, y: 0.5621891}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e13f2b668ee151443bb35693deacbad5
-      internalID: -487159412
+      spriteID: 2bd03548a306b494592ec672ecae78eb
+      internalID: -998950161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hakai jump strat_3
+      name: Akai attack 2(up)_2
       rect:
         serializedVersion: 2
         x: 900
-        y: 300
-        width: 273
-        height: 300
-      alignment: 9
-      pivot: {x: 0.6547203, y: 0.46714762}
-      border: {x: 107, y: 36, z: 0, w: 50}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c1489299f4f04544935d5a2b3748646
-      internalID: -1257304403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hakai jump strat_4
-      rect:
-        serializedVersion: 2
-        x: 0
         y: 0
-        width: 300
+        width: 450
         height: 300
       alignment: 9
-      pivot: {x: 0.5727443, y: 0.45541462}
-      border: {x: 107, y: 24, z: 27, w: 50}
+      pivot: {x: 0.42596543, y: 0.55330485}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cd03f374ae415e49bca2fd7eadfb631
-      internalID: -1597239764
+      spriteID: b10c23b3944f3f14190f1820252e412d
+      internalID: -1794992623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hakai jump strat_5
+      name: Akai attack 2(up)_3
       rect:
         serializedVersion: 2
-        x: 300
+        x: 1350
         y: 0
-        width: 300
+        width: 450
         height: 300
       alignment: 9
-      pivot: {x: 0.57509106, y: 0.46010792}
-      border: {x: 108, y: 5, z: 30, w: 58}
+      pivot: {x: 0.38746744, y: 0.5577469}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af673fad04a6e2343ab3215b81f070f2
-      internalID: -2067321523
+      spriteID: 8007a10c2bf2a934589bd5874fbd944e
+      internalID: -1654799905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hakai jump strat_6
+      name: Akai attack 2(up)_4
       rect:
         serializedVersion: 2
-        x: 595
-        y: 2
-        width: 300
-        height: 242
+        x: 1800
+        y: 0
+        width: 450
+        height: 300
       alignment: 9
-      pivot: {x: 0.58917034, y: 0.5756338}
-      border: {x: 104, y: 0, z: 23, w: 0}
+      pivot: {x: 0.34304607, y: 0.5444209}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4384187380d62a140bf5586ce9f6123f
-      internalID: -105256702
+      spriteID: 7d30d80face30fe4fab76e2b43f8e1f9
+      internalID: -1995453394
       vertices: []
       indices: 
       edges: []
@@ -254,13 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hakai jump strat_0: -869033483
-      hakai jump strat_1: 1496143483
-      hakai jump strat_2: -487159412
-      hakai jump strat_3: -1257304403
-      hakai jump strat_4: -1597239764
-      hakai jump strat_5: -2067321523
-      hakai jump strat_6: -105256702
+      Akai attack 2(up)_0: 1036160588
+      Akai attack 2(up)_1: -998950161
+      Akai attack 2(up)_2: -1794992623
+      Akai attack 2(up)_3: -1654799905
+      Akai attack 2(up)_4: -1995453394
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c596fb795ff9fb34cb77e2b460202915
+guid: 6a4af703f6f5d4548936fbea2730b9ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -84,9 +84,9 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 12
+    textureFormat: -1
     textureCompression: 1
-    compressionQuality: 100
+    compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hakai idle 1_0
+      name: Hakai jump 3(mid)_0
       rect:
         serializedVersion: 2
-        x: 83
-        y: 28
-        width: 163
-        height: 195
+        x: 81
+        y: 304
+        width: 168
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b314483ff92f974899146d5f99d689f
-      internalID: -1762762093
+      spriteID: 48777582fa1097f4d815b4c13804c469
+      internalID: 1408310697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hakai idle 1_1
+      name: Hakai jump 3(mid)_1
       rect:
         serializedVersion: 2
-        x: 382
-        y: 28
-        width: 163
-        height: 192
+        x: 374
+        y: 350
+        width: 162
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf38cdb60c4c48148a34a04e844e7490
-      internalID: 171132887
+      spriteID: c08886f5c5e308b4e827b7e7f0776975
+      internalID: -715985671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hakai idle 1_2
+      name: Hakai jump 3(mid)_2
       rect:
         serializedVersion: 2
-        x: 682
-        y: 28
-        width: 163
-        height: 190
+        x: 674
+        y: 350
+        width: 162
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15c6dce48a6fd1d4481692dd812f2068
-      internalID: 584224425
+      spriteID: dab73e7fe1a50084083b48e95b29d616
+      internalID: 1516218202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hakai idle 1_3
+      name: Hakai jump 3(mid)_3
       rect:
         serializedVersion: 2
-        x: 982
-        y: 28
-        width: 163
-        height: 191
+        x: 74
+        y: 50
+        width: 162
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +174,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a51495c183148047b24f57cd03b0219
-      internalID: 626199305
+      spriteID: edfae371687637e4fab43ecece01a1c5
+      internalID: 1699291855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hakai jump 3(mid)_4
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 50
+        width: 164
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3310c98ed6f21d54fa1d51efcb643965
+      internalID: -181882171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hakai jump 3(mid)_5
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 50
+        width: 164
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb5d6f3670ea7d4fb49e67ba7e79da2
+      internalID: 1297926376
       vertices: []
       indices: 
       edges: []
@@ -184,17 +226,20 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hakai idle 1_0: -1762762093
-      Hakai idle 1_1: 171132887
-      Hakai idle 1_2: 584224425
-      Hakai idle 1_3: 626199305
+      Hakai jump 3(mid)_0: 1408310697
+      Hakai jump 3(mid)_1: -715985671
+      Hakai jump 3(mid)_2: 1516218202
+      Hakai jump 3(mid)_3: 1699291855
+      Hakai jump 3(mid)_4: -181882171
+      Hakai jump 3(mid)_5: 1297926376
+      Hakai jump 3(mid)_6: 467031242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
