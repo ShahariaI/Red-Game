@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 441906310}
   - component: {fileID: 441906312}
   - component: {fileID: 441906311}
+  - component: {fileID: 441906313}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -404,12 +405,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 1
   damage: 1
-  player:
+  playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  boxCollider: {fileID: 441906310}
   attackPoint: {fileID: 700077564}
   health: 50
-  attackRange: 2
+  attackRange: 5
   enemyAI: {fileID: 441906312}
   playerHealth: {fileID: 1437126666}
 --- !u!114 &441906312
@@ -427,6 +429,41 @@ MonoBehaviour:
   player: {fileID: 1437126658}
   speed: 1
   distanceBetween: 5
+--- !u!58 &441906313
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441906305}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0039713383, y: 0.18750644}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &488719735
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926772055}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameChek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +952,7 @@ GameObject:
   - component: {fileID: 1437126665}
   - component: {fileID: 1437126667}
   - component: {fileID: 1437126666}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
