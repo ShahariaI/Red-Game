@@ -1050,6 +1050,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014f26c78250538489f3670e8a793c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxStamina: 100
+  currentStamina: 0
+  staminaRegenRate: 10
   rb: {fileID: 1437126662}
   groundCheck: {fileID: 2123477985}
   groundLayer:
