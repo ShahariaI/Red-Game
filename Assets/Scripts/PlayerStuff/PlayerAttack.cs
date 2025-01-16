@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,9 @@ public class PlayerAttack : MonoBehaviour
 
     private float nextAttackTime = 0f; // Time when the player can attack next
 
+    public List<string> Attacks;
+    private int i = 0;
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -34,8 +38,14 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-        animator.SetTrigger("Atak");
 
+        animator.Play(Attacks[i]);
+        i++;
+
+        if(i >= Attacks.Count)
+        {
+            i = 0;
+        }
         // Play attack animation (if applicable)
         Debug.Log("Player attacks!");
 

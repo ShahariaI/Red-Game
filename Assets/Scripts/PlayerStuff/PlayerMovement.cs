@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 16f;
+    private float jumpingPower = 20f;
     private bool isFacingRight = true;
     private bool doubleJump;
 
@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public float maxStamina = 100f;
     public float currentStamina = 0f;
     public float staminaRegenRate = 10f;
+
+    private bool isFalling = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -54,9 +56,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded()|| doubleJump)
         {
+            animator.Play("jump start");
             print("first jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            animator.SetBool("isJumping", true);
             doubleJump = !doubleJump;
         }
 
@@ -79,6 +81,18 @@ public class PlayerMovement : MonoBehaviour
         Flip();
 
         RegenStamina();
+
+        if(rb.velocity.y <= 0 && !IsGrounded() && !isFalling)
+        {
+            animator.SetBool("isFalling", true);
+            animator.Play("jump mid");
+            isFalling = true;
+        }
+        if (IsGrounded())
+        {
+            animator.SetBool("isFalling", false);
+            isFalling = false;
+        }
     }
 
     private void FixedUpdate()
@@ -87,8 +101,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("yVelocity", rb.velocity.y);
         if (isDashing)
         {
-            return;
-            
+            return; 
         }
 
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
