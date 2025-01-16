@@ -9,6 +9,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] public int damage;
     [SerializeField] private LayerMask playerLayer; // Renamed for clarity
     [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private CircleCollider2D circleCollider;
 
     private float cooldownTimer = Mathf.Infinity;
     public Transform attackPoint;

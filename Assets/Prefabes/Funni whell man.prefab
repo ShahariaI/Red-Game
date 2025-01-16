@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5921629462302462423}
   - component: {fileID: 4066616460571866116}
   - component: {fileID: 9149016690599795130}
+  - component: {fileID: 4542618161635407644}
   - component: {fileID: 7854097338926503131}
   - component: {fileID: 9081565104626498282}
   - component: {fileID: 2841286690310989770}
@@ -102,6 +103,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c63d1671e50a7142ab81ad03a738363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4542618161635407644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2460452518721023149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d5d0bef596e93408549b401ed63099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 0
+  damage: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  boxCollider: {fileID: 0}
+  circleCollider: {fileID: 6477621151473814493}
+  attackPoint: {fileID: 0}
+  health: 50
+  attackRange: 1
+  enemyAI: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!114 &7854097338926503131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5430741c93e1e604a9409b9bcb799269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   pointA: {fileID: 0}
   pointB: {fileID: 0}
 --- !u!114 &9081565104626498282
@@ -129,15 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46779d3c67f7ba4459fadd741c5bef6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  damage: 1
-  attackRange: 1.23
-  attackCooldown: 1
-  attackPoint: {fileID: 8168087408966152110}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  playerHealth: {fileID: 0}
+  MaxHealth: 50
+  currentHealth: 0
 --- !u!95 &2841286690310989770
 Animator:
   serializedVersion: 5
