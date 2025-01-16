@@ -11,28 +11,31 @@ public class EnemyAI : MonoBehaviour
 
     private float distance;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        
-        if(distance < 4)
+        if (player != null)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            distance = Vector2.Distance(transform.position, player.transform.position);
 
+            if (distance < distanceBetween)
+            {
+                Vector2 direction = player.transform.position - transform.position;
+                direction.Normalize();
+
+                transform.position = Vector2.MoveTowards(
+                    transform.position,
+                    player.transform.position,
+                    speed * Time.deltaTime
+                );
+            }
         }
-
     }
 }

@@ -4,25 +4,26 @@ using UnityEngine;
 using static EnemyWalker;
 
 
-public class EnemyHover : MonoBehaviour, IMovementBehavior
+public class EnemyHover : MonoBehaviour
 {
-    public float hoverSpeed = 1f;  // Speed of the horizontal movement
-    public float hoverRange = 1f; // Range of the horizontal movement
-    private float initialX;       // Initial x position
+    public float hoverSpeed = 2f;  // Speed of the hovering movement
+    public float hoverRange = 2f; // Distance the enemy moves back and forth
+
+    private Vector2 startPosition; // Starting position of the enemy
+    private float hoverTime;       // Tracks time for movement
 
     void Start()
     {
-        // Store the initial x position
-        initialX = transform.position.x;
+        // Record the starting position
+        startPosition = transform.position;
     }
 
-    public void Move(Transform enemyTransform)
+    void Update()
     {
-        // Calculate the new x position based on a sine wave
-        float newX = initialX + Mathf.Sin(Time.time * hoverSpeed) * hoverRange;
-
-        // Update the enemy's position, keeping y and z the same
-        enemyTransform.position = new Vector3(newX, enemyTransform.position.y, enemyTransform.position.z);
+        // Calculate the side-to-side movement
+        hoverTime += Time.deltaTime * hoverSpeed;
+        float offset = Mathf.Sin(hoverTime) * hoverRange;
+        transform.position = new Vector2(startPosition.x + offset, startPosition.y);
     }
 }
 
