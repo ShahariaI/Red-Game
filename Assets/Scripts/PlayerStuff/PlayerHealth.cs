@@ -7,7 +7,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
 
-    
+    private bool isBlocking = false; // Tracks if the player is blocking
+
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -15,24 +16,24 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
+        if (isBlocking)
+        {
+            Debug.Log("Damage negated due to blocking!");
+            return; // Completely negate the damage
+        }
+
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
-            // player hurt
+            // Player death logic
+            Debug.Log("Player is dead!");
             Destroy(gameObject);
         }
-        else
-        {
-            // player dead
-        }
-
     }
 
-    private void Update()
+    public void SetBlocking(bool blocking)
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            TakeDamage(1);
+        isBlocking = blocking;
     }
-
 }
