@@ -207,14 +207,14 @@ GameObject:
   m_Component:
   - component: {fileID: 284822440}
   - component: {fileID: 284822439}
-  - component: {fileID: 284822438}
   - component: {fileID: 284822436}
-  - component: {fileID: 284822435}
-  - component: {fileID: 284822434}
-  - component: {fileID: 284822432}
   - component: {fileID: 284822441}
+  - component: {fileID: 284822434}
+  - component: {fileID: 284822438}
+  - component: {fileID: 284822432}
+  - component: {fileID: 284822435}
   m_Layer: 3
-  m_Name: Enemy (1)
+  m_Name: HoverEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,13 +227,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284822431}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 833664505b4401b4395be281e9fd9985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSpeed: 2
-  hoverRange: 4
+  hoverRange: 10
 --- !u!114 &284822434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +252,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   boxCollider: {fileID: 284822436}
+  circleCollider: {fileID: 0}
   attackPoint: {fileID: 442473902}
   health: 50
   attackRange: 2
@@ -270,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1437126658}
-  speed: 1
+  speed: 2
   distanceBetween: 5
 --- !u!61 &284822436
 BoxCollider2D:
@@ -390,7 +391,7 @@ Transform:
   m_GameObject: {fileID: 284822431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.16, y: -3.23, z: 0}
+  m_LocalPosition: {x: -4.7, y: 2.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -570,7 +571,7 @@ Transform:
   m_GameObject: {fileID: 307331629}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.62, y: -2.9, z: -0.02274988}
+  m_LocalPosition: {x: -1, y: -3.5, z: -0.02274988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -606,7 +607,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441906305}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5430741c93e1e604a9409b9bcb799269, type: 3}
   m_Name: 
@@ -687,7 +688,7 @@ Transform:
   m_GameObject: {fileID: 441906305}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.36, y: -2.68, z: 0}
+  m_LocalPosition: {x: -1, y: -2.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -757,6 +758,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   boxCollider: {fileID: 441906310}
+  circleCollider: {fileID: 0}
   attackPoint: {fileID: 700077564}
   health: 50
   attackRange: 2
@@ -769,13 +771,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441906305}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50695d1606ea4aa4e85f27bf67101904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1437126658}
-  speed: 1
+  speed: 2
   distanceBetween: 5
 --- !u!58 &441906313
 CircleCollider2D:
@@ -1427,7 +1429,7 @@ Transform:
   m_GameObject: {fileID: 855188903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.89, y: -2.88, z: -0.02274988}
+  m_LocalPosition: {x: 10, y: -3.5, z: -0.02274988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1969,6 +1971,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
+  Attacks: []
 --- !u!114 &1437126669
 MonoBehaviour:
   m_ObjectHideFlags: 0
