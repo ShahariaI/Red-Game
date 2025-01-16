@@ -43,4 +43,15 @@ public class EnemyWalker : MonoBehaviour
             spriteRenderer.flipX = targetPosition == pointA.position;
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(pointA.transform.position, 0.5f);
+        Gizmos.DrawSphere(pointB.transform.position, 0.5f);
+    }
+
+
+
 }
+
+
