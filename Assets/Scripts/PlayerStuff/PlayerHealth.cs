@@ -8,7 +8,9 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth { get; private set; }
 
     private bool isBlocking = false; // Tracks if the player is blocking
+    private bool isDead;
 
+    public MainMenu mainMenu;
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -24,8 +26,11 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
+            isDead = true;
+            mainMenu.gameOver();
+
             // Player death logic
             Debug.Log("Player is dead!");
             Destroy(gameObject);
