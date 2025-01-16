@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashStamina = 25f;
     private Animator animator;
 
+    private float runningSpeed = 15f;
+    private bool isRunning;
+
     public float maxStamina = 100f;
     public float currentStamina = 0f;
     public float staminaRegenRate = 10f;
@@ -40,6 +43,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        isRunning = Input.GetKey(KeyCode.LeftControl);
+        speed = isRunning ? runningSpeed : 8f;
 
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
