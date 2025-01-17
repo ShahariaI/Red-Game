@@ -44,6 +44,7 @@ public class PlayerBlock : MonoBehaviour
         playerHealth.SetBlocking(false); // Notify PlayerHealth to stop blocking
         Debug.Log("Player stopped blocking!");
 
+        animator.Play("idle");
         // Wait for the cooldown before allowing blocking again
         yield return new WaitForSeconds(blockCooldown);
 
