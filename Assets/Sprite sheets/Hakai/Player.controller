@@ -332,7 +332,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: parry
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2300036638504067980}
@@ -632,22 +632,22 @@ AnimatorStateMachine:
     m_Position: {x: 700, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6830126618599654348}
-    m_Position: {x: 950, y: 540, z: 0}
+    m_Position: {x: 1170, y: 770, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4017912516686516268}
-    m_Position: {x: 980, y: 600, z: 0}
+    m_Position: {x: 1150, y: 810, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5051584245843036423}
-    m_Position: {x: 1020, y: 660, z: 0}
+    m_Position: {x: 1150, y: 850, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5663664012433932432}
-    m_Position: {x: 1050, y: 720, z: 0}
+    m_Position: {x: 1150, y: 890, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3127289167491769691}
-    m_Position: {x: 1120, y: -190, z: 0}
+    m_Position: {x: 30, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3426177645321611510}
-    m_Position: {x: 1120, y: -120, z: 0}
+    m_Position: {x: 30, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4531509771383542620}
     m_Position: {x: 700, y: 210, z: 0}
@@ -673,7 +673,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 370, y: 320, z: 0}
-  m_EntryPosition: {x: 40, y: 120, z: 0}
+  m_EntryPosition: {x: 130, y: 170, z: 0}
   m_ExitPosition: {x: 1000, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -5544004146836394156}

@@ -11,8 +11,11 @@ public class PlayerBlock : MonoBehaviour
 
     private PlayerHealth playerHealth;
 
+    private Animator animator;
+
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
     }
 
@@ -27,6 +30,8 @@ public class PlayerBlock : MonoBehaviour
 
     private IEnumerator Block()
     {
+        animator.Play("parry");
+
         isBlocking = true;
         canBlock = false;
         playerHealth.SetBlocking(true); // Notify PlayerHealth to negate damage
