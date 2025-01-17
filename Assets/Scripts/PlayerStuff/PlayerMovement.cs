@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float runningSpeed = 15f;
     private bool isRunning;
+    private float runningCost = 5f;
 
     private float maxStamina = 100f;
     public float currentStamina = 0f;
@@ -50,7 +51,10 @@ public class PlayerMovement : MonoBehaviour
         isRunning = Input.GetKey(KeyCode.LeftControl);
         speed = isRunning ? runningSpeed : 8f;
         animator.SetBool("isRunnig", isRunning);
-        
+        if (isRunning)
+        {
+            currentStamina -= runningCost * Time.deltaTime;
+        }
 
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
