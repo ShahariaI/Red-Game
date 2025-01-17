@@ -18834,7 +18834,7 @@ PrefabInstance:
       objectReference: {fileID: 1693074407}
     - target: {fileID: 4325439581460856888, guid: 2225803ce5c037540bf78ebb8982ccc8, type: 3}
       propertyPath: m_Name
-      value: AIEnemy
+      value: ugly face 1
       objectReference: {fileID: 0}
     - target: {fileID: 4605393952404614578, guid: 2225803ce5c037540bf78ebb8982ccc8, type: 3}
       propertyPath: speed
@@ -21822,14 +21822,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014f26c78250538489f3670e8a793c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStamina: 100
   currentStamina: 0
-  staminaRegenRate: 10
   rb: {fileID: 1693074411}
   groundCheck: {fileID: 307364620}
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  staminabar: {fileID: 0}
 --- !u!61 &1693074410
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21963,7 +21962,7 @@ Transform:
   m_GameObject: {fileID: 1693074405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.14, y: -2.65, z: 0}
+  m_LocalPosition: {x: -10.45, y: -2.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
