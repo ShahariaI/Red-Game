@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private float staminaRegenRate = 10f;
 
     private bool isFalling = false;
+    [SerializeField] private GameObject pofe;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -68,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             print("double jump");
+            Instantiate(pofe, transform.position, Quaternion.identity);
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             
         }

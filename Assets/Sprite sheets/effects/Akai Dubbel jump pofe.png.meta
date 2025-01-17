@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 716858db0143740499d75a97ff0c2065
+guid: cbd871193c23c0a469abc2f6f6eb8ecd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,64 +97,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit effect 1_0
+      name: Akai Dubbel jump pofe_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6990e04f98e50634992e0787f98c302f
+      internalID: -802939627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Akai Dubbel jump pofe_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e68bc307e18b8f4b995fe34924f7796
+      internalID: 769089279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Akai Dubbel jump pofe_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078d83eed2f962e40a53eef4de794e4b
+      internalID: -1847822488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Akai Dubbel jump pofe_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 450
+        width: 300
         height: 300
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e6b295b00b0e994c9d6d103c6ac576a
-      internalID: 728071456
+      spriteID: ae52df3f14ff9754b97230f56d60db28
+      internalID: 1207758714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit effect 1_1
+      name: Akai Dubbel jump pofe_4
       rect:
         serializedVersion: 2
-        x: 450
+        x: 300
         y: 0
-        width: 450
+        width: 300
         height: 300
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fd95c4d9c63d984d9e61f68c740d167
-      internalID: -1904423321
+      spriteID: 6f12fcead0ad2784e89f0016f64bbf32
+      internalID: -1062265878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit effect 1_2
+      name: Akai Dubbel jump pofe_5
       rect:
         serializedVersion: 2
-        x: 900
+        x: 600
         y: 0
-        width: 450
+        width: 300
         height: 300
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42cc69605b9e331439b312ee48f115d3
-      internalID: 599818082
+      spriteID: fe406f59cf5ef794ebde2b729d04823b
+      internalID: 1851513424
       vertices: []
       indices: 
       edges: []
@@ -170,9 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit effect 1_0: 728071456
-      Hit effect 1_1: -1904423321
-      Hit effect 1_2: 599818082
+      Akai Dubbel jump pofe_0: -802939627
+      Akai Dubbel jump pofe_1: 769089279
+      Akai Dubbel jump pofe_2: -1847822488
+      Akai Dubbel jump pofe_3: 1207758714
+      Akai Dubbel jump pofe_4: -1062265878
+      Akai Dubbel jump pofe_5: 1851513424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
