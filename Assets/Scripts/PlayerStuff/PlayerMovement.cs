@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             doubleJump = false;
         }
 
-        if (Input.GetButtonDown("Jump") && IsGrounded()|| doubleJump)
+        if (Input.GetButtonDown("Jump") && (IsGrounded()|| doubleJump))
         {
             animator.Play("jump start");
             print("first jump");
