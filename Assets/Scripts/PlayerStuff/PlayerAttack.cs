@@ -23,6 +23,9 @@ public class PlayerAttack : MonoBehaviour
     
     private void Start()
     {
+        Attacks.Add("atak");
+        Attacks.Add("attak 2");
+        Attacks.Add("attack 3");
         animator = GetComponent<Animator>();
     }
 
