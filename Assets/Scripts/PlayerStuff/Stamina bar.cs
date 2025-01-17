@@ -16,6 +16,6 @@ public class Staminabar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerMovement.currentStamina = staminaBar.value;
+        staminaBar.value = playerMovement.currentStamina;
     }
 }

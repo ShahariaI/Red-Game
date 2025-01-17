@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBlock : MonoBehaviour
 {
     [SerializeField] private float blockDuration = 2.0f; // Maximum time the player can block
-    [SerializeField] private float blockCooldown = 1.0f; // Cooldown before the player can block again
+    [SerializeField] private float blockCooldown = 2.5f; // Cooldown before the player can block again
     private bool isBlocking = false; // Whether the player is currently blocking
     private bool canBlock = true;   // Whether the player is allowed to block
 

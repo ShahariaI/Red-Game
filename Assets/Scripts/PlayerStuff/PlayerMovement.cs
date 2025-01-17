@@ -16,16 +16,16 @@ public class PlayerMovement : MonoBehaviour
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
-    private float dashStamina = 25f;
+    private float dashStamina = 40f;
     private Animator animator;
 
     private float runningSpeed = 15f;
     private bool isRunning;
-    private float runningCost = 5f;
+    private float runningCost = 20f;
 
     private float maxStamina = 100f;
     public float currentStamina = 0f;
-    private float staminaRegenRate = 10f;
+    private float staminaRegenRate = 25f;
 
     private bool isFalling = false;
     [SerializeField] private GameObject pofe;
@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void RegenStamina()
     {
-        if(!isDashing && IsGrounded() && currentStamina <= maxStamina)
+        if(!isDashing && IsGrounded() && currentStamina <= maxStamina && !isRunning)
         {
             currentStamina += staminaRegenRate * Time.deltaTime;
         }   
