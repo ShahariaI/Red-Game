@@ -44,9 +44,11 @@ GameObject:
   - component: {fileID: 8372667745150806803}
   - component: {fileID: 8345870329832730904}
   - component: {fileID: 5109685725649774309}
+  - component: {fileID: 1600899759148798509}
   - component: {fileID: 4605393952404614578}
+  - component: {fileID: 7159217137926944563}
   m_Layer: 3
-  m_Name: AIEnemy
+  m_Name: uglymanface
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -1914573461, guid: 8409139bb9b87c3429121a340548eb5c, type: 3}
   m_Color: {r: 0.070588216, g: 0.78431374, b: 0.19699049, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,9 +156,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    border: {x: 0.6446018, y: 0.3, z: 0.96690273, w: 0.87777776}
+    pivot: {x: 0.252581, y: 0.40955707}
+    oldSize: {x: 5.001221, y: 3.3333333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -177,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46779d3c67f7ba4459fadd741c5bef6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 50
+  MaxHealth: 20
   currentHealth: 0
 --- !u!114 &5109685725649774309
 MonoBehaviour:
@@ -203,6 +205,30 @@ MonoBehaviour:
   attackRange: 2
   enemyAI: {fileID: 4605393952404614578}
   playerHealth: {fileID: 0}
+--- !u!114 &1600899759148798509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4325439581460856888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45491b96e1fd2934a863e8ce55cc6e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 0
+  damage: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  boxCollider: {fileID: 0}
+  circleCollider: {fileID: 0}
+  attackPoint: {fileID: 0}
+  health: 20
+  attackRange: 1
+  enemyAI: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!114 &4605393952404614578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,11 +236,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4325439581460856888}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50695d1606ea4aa4e85f27bf67101904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 2
-  distanceBetween: 5
+  speed: 6
+  distanceBetween: 12
+--- !u!95 &7159217137926944563
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4325439581460856888}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c52142f1c19412408acd0dbd2f0e482, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
