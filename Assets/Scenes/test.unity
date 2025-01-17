@@ -17211,7 +17211,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 218584117575463681, guid: 2225803ce5c037540bf78ebb8982ccc8, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 218584117575463681, guid: 2225803ce5c037540bf78ebb8982ccc8, type: 3}
       propertyPath: m_Sprite
