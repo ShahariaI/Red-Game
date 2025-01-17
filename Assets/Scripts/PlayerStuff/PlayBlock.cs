@@ -11,8 +11,11 @@ public class PlayerBlock : MonoBehaviour
 
     private PlayerHealth playerHealth;
 
+    private Animator animator;
+
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
     }
 
@@ -27,6 +30,8 @@ public class PlayerBlock : MonoBehaviour
 
     private IEnumerator Block()
     {
+        animator.Play("parry");
+
         isBlocking = true;
         canBlock = false;
         playerHealth.SetBlocking(true); // Notify PlayerHealth to negate damage
@@ -39,6 +44,7 @@ public class PlayerBlock : MonoBehaviour
         playerHealth.SetBlocking(false); // Notify PlayerHealth to stop blocking
         Debug.Log("Player stopped blocking!");
 
+        animator.Play("idle");
         // Wait for the cooldown before allowing blocking again
         yield return new WaitForSeconds(blockCooldown);
 

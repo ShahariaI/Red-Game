@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
             print("first jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             doubleJump = !doubleJump;
+            isFalling = false;
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -92,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (IsGrounded() && isFalling)
         {
-            animator.Play("fall");
+            animator.Play("Landing");
             animator.SetBool("isFalling", false);
             isFalling = false;
         }
