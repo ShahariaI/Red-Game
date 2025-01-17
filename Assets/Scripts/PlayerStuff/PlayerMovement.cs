@@ -22,16 +22,16 @@ public class PlayerMovement : MonoBehaviour
     private float runningSpeed = 15f;
     private bool isRunning;
 
-    public float maxStamina = 100f;
+    private float maxStamina = 100f;
     public float currentStamina = 0f;
-    public float staminaRegenRate = 10f;
+    private float staminaRegenRate = 10f;
 
     private bool isFalling = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-
+    [SerializeField] private Staminabar staminabar;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -48,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
 
         isRunning = Input.GetKey(KeyCode.LeftControl);
         speed = isRunning ? runningSpeed : 8f;
+        animator.SetBool("isRunnig", isRunning);
+        
 
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
@@ -88,8 +90,9 @@ public class PlayerMovement : MonoBehaviour
             animator.Play("jump mid");
             isFalling = true;
         }
-        if (IsGrounded())
+        if (IsGrounded() && isFalling)
         {
+            animator.Play("fall");
             animator.SetBool("isFalling", false);
             isFalling = false;
         }
