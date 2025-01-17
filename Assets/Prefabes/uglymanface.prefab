@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 4605393952404614578}
   - component: {fileID: 7159217137926944563}
   m_Layer: 3
-  m_Name: AIEnemy
+  m_Name: uglymanface
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
