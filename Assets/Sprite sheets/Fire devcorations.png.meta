@@ -101,12 +101,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 14
-        y: 300
+        y: 305
         width: 122
-        height: 300
+        height: 205
       alignment: 9
-      pivot: {x: 0.43653506, y: 0.17790233}
-      border: {x: 0, y: 5, z: 1, w: 90}
+      pivot: {x: 0.45166567, y: 0.1779023}
+      border: {x: 0, y: 0, z: 1, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -121,13 +121,13 @@ TextureImporter:
       name: Fire devcorations_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 300
-        width: 300
-        height: 244
+        x: 301
+        y: 308
+        width: 125
+        height: 236
       alignment: 9
-      pivot: {x: 0.21919689, y: 0.19648488}
-      border: {x: 1, y: 8, z: 174, w: 0}
+      pivot: {x: 0.49637622, y: 0.1779023}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -142,13 +142,13 @@ TextureImporter:
       name: Fire devcorations_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 300
-        width: 300
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 603
+        y: 305
+        width: 113
+        height: 241
+      alignment: 9
+      pivot: {x: 0.5268479, y: 0.1779023}
+      border: {x: 0, y: 0, z: 113, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -163,13 +163,13 @@ TextureImporter:
       name: Fire devcorations_3
       rect:
         serializedVersion: 2
-        x: 900
+        x: 914
         y: 300
-        width: 300
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        width: 106
+        height: 279
+      alignment: 9
+      pivot: {x: 0.48143438, y: 0.1779023}
+      border: {x: 0, y: 0, z: 106, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -184,13 +184,13 @@ TextureImporter:
       name: Fire devcorations_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 0
-        width: 300
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        width: 106
+        height: 282
+      alignment: 9
+      pivot: {x: 0.50231934, y: 0.1779023}
+      border: {x: 0, y: 1, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -205,12 +205,12 @@ TextureImporter:
       name: Fire devcorations_5
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 300
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 304
+        y: 1
+        width: 120
+        height: 281
+      alignment: 9
+      pivot: {x: 0.51713, y: 0.1779023}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,12 +226,12 @@ TextureImporter:
       name: Fire devcorations_6
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 300
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 616
+        y: 1
+        width: 108
+        height: 293
+      alignment: 9
+      pivot: {x: 0.49689963, y: 0.16348633}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: Fire devcorations_7
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
-        width: 300
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 912
+        y: 2
+        width: 114
+        height: 276
+      alignment: 9
+      pivot: {x: 0.5004958, y: 0.1779023}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
