@@ -47,7 +47,7 @@ public class Scuicidebomb : MonoBehaviour
 
             boxCollider.enabled = false;
             enemyAI.enabled = false;
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
 
             if (collision.gameObject.CompareTag("Player"))
             {
