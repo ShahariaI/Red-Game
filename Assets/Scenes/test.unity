@@ -15774,7 +15774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20.400024, y: -17.299988}
+  m_AnchoredPosition: {x: 20.900024, y: -17.299988}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018255889
@@ -22516,7 +22516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -278, y: 176.00003}
+  m_AnchoredPosition: {x: -520, y: 305.00003}
   m_SizeDelta: {x: 417.1805, y: 157.6692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379512685
@@ -23955,7 +23955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -278, y: 176}
+  m_AnchoredPosition: {x: -520, y: 305}
   m_SizeDelta: {x: 417.1805, y: 157.6692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1463787801
@@ -25268,7 +25268,6 @@ GameObject:
   - component: {fileID: 1552641852}
   - component: {fileID: 1552641854}
   - component: {fileID: 1552641853}
-  - component: {fileID: 1552641855}
   m_Layer: 7
   m_Name: Platform (4)
   m_TagString: Platform
@@ -25321,7 +25320,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -25388,25 +25387,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!251 &1552641855
-PlatformEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552641851}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RotationalOffset: 0
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 1
 --- !u!114 &1570394164 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4605393952404614578, guid: 2225803ce5c037540bf78ebb8982ccc8, type: 3}
