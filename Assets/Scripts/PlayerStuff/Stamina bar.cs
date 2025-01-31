@@ -18,4 +18,12 @@ public class Staminabar : MonoBehaviour
     {
         staminaBar.value = playerMovement.currentStamina;
     }
+
+    //public void UseStamina(int cost, int threshold)
+   // {
+    //    if (staminaBar.value >= threshold)
+    //    {
+    //        staminaBar.value = staminaBar.value - cost;
+    //    }
+   // }
 }
